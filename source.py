@@ -15,7 +15,7 @@ chrome_path = 'C:/Users/veyro/OneDrive/Desktop/chromedriver_win32/chromedriver.e
 browser = webdriver.Chrome(chrome_path)
 
 df_airports = pd.read_html('https://en.wikipedia.org/wiki/List_of_the_busiest_airports_in_the_United_States')[0]
-airport_codes = df_airports['IATACode'][10:]
+airport_codes = df_airports['IATACode'][:10]
 already_processed = []
 
 df_out = {'origin': [], 'destination': [], 'price': [], 'duration': [], 'airline': []}
