@@ -4,8 +4,11 @@ import random
 import time
 
 def convertDuration(str):
-    duration = int(str.split(' ')[0].replace('h', '')) * 60
-    duration += int(str.split(' ')[1].replace('m', ''))
+        if len(str) > 3:
+        duration = int(str.split(' ')[0].replace('h', '')) * 60
+        duration += int(str.split(' ')[1].replace('m', ''))
+    else:
+        duration = int(str.replace('m', ''))
     return duration
 
 chrome_path = 'C:/Users/veyro/OneDrive/Desktop/chromedriver_win32/chromedriver.exe'
